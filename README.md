@@ -5,7 +5,7 @@
 
 Classifying ~**1.8 million** financial news headlines as **negative / neutral / positive**, and comparing classical, recurrent, and transformer-based models for financial sentiment. We use **FinBERT** as an automatic labeling ("teacher") model, validate those labels against the expert-annotated **Financial PhraseBank**, and fine-tune five models — culminating in an interactive Streamlit demo that compares them side-by-side.
 
-📄 Full write-up: [`docs/final-group-project-report.pdf`](docs/final-group-project-report.pdf) · 🎞️ Demo video: [Loom](https://www.loom.com/share/a39dedccda1741e284489ed3ed0f91ba)
+Full write-up: [`docs/final-group-project-report.pdf`](docs/final-group-project-report.pdf) · Demo video: [Loom](https://www.loom.com/share/a39dedccda1741e284489ed3ed0f91ba)
 
 ---
 
@@ -37,7 +37,7 @@ We initially prototyped on a **10,000-row sample** (PyCharm + Google Cloud), but
 - **Fields:** `headline`, `url`, `publisher`, `date`, `stock` (ticker)
 - **Benchmark for label validation:** [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) (expert-annotated)
 
-> ⚠️ The dataset is **not committed** to this repo (it is large and lives on Google Drive). Download `raw_partner_headlines.csv` from Kaggle and place it under `data/` to reproduce the pipeline. See [How to Run](#how-to-run).
+> **Note:** The dataset is **not committed** to this repo (it is large and lives on Google Drive). Download `raw_partner_headlines.csv` from Kaggle and place it under `data/` to reproduce the pipeline. See [How to Run](#how-to-run).
 
 ## Architecture
 
