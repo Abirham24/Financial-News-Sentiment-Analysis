@@ -43,22 +43,22 @@ We initially prototyped on a **10,000-row sample** (PyCharm + Google Cloud), but
 
 ```mermaid
 flowchart TD
-    A["📰 Raw Dataset<br/>~1.8M headlines (Kaggle)"] --> B["🧹 Text Cleaning<br/>lowercase · strip URLs/symbols<br/>spaCy lemmatization · stopwords"]
-    B --> C["🏷️ FinBERT Labeling<br/>negative · neutral · positive<br/>+ softmax confidence"]
-    C -. validate .-> V["✅ Financial PhraseBank<br/>benchmark — 97.2% acc"]
-    C --> D["📦 Cleaned + Labeled Dataset"]
-    D --> E["✂️ Stratified Split<br/>train · val · test"]
+    A["Raw Dataset<br/>~1.8M headlines (Kaggle)"] --> B["Text Cleaning<br/>lowercase · strip URLs/symbols<br/>spaCy lemmatization · stopwords"]
+    B --> C["FinBERT Labeling<br/>negative · neutral · positive<br/>+ softmax confidence"]
+    C -. validate .-> V["Financial PhraseBank<br/>benchmark — 97.2% acc"]
+    C --> D["Cleaned + Labeled Dataset"]
+    D --> E["Stratified Split<br/>train · val · test"]
 
-    E --> M1["📈 TF-IDF + LogReg<br/>classical baseline"]
-    E --> M2["🔁 BiLSTM<br/>deep-learning baseline"]
-    E --> M3["🤖 Transformers<br/>DistilBERT · BERT-base · FinBERT"]
-    M3 --> M4["🗳️ Soft-Voting Ensemble"]
+    E --> M1["TF-IDF + LogReg<br/>classical baseline"]
+    E --> M2["BiLSTM<br/>deep-learning baseline"]
+    E --> M3["Transformers<br/>DistilBERT · BERT-base · FinBERT"]
+    M3 --> M4["Soft-Voting Ensemble"]
 
-    M1 --> EV["📊 Evaluation<br/>Accuracy · F1 · Confusion Matrix"]
+    M1 --> EV["Evaluation<br/>Accuracy · F1 · Confusion Matrix"]
     M2 --> EV
     M3 --> EV
     M4 --> EV
-    EV --> S["🖥️ Streamlit Demo<br/>multi-model comparison"]
+    EV --> S["Streamlit Demo<br/>multi-model comparison"]
 
     classDef data fill:#e3f2fd,stroke:#1565c0,color:#0d47a1;
     classDef proc fill:#f1f8e9,stroke:#558b2f,color:#1b5e20;
@@ -69,21 +69,6 @@ flowchart TD
     class M1,M2,M3,M4 model;
     class EV,S out;
 ```
-
-<details>
-<summary>Plain-text version</summary>
-
-```
-Raw dataset (1.8M)
-  → Text cleaning (lowercase, strip URLs/symbols, spaCy lemmatization, stopwords)
-  → FinBERT labeling (negative/neutral/positive + confidence)   ──validate──► Financial PhraseBank (97.2%)
-  → Cleaned + labeled dataset
-  → Stratified train/val/test split
-  → Models: TF-IDF+LogReg · BiLSTM · DistilBERT · BERT-base · FinBERT · Ensemble
-  → Evaluation (Accuracy / F1 / Confusion Matrix)
-  → Streamlit multi-model demo
-```
-</details>
 
 ## Labeling & Validation
 
@@ -218,4 +203,3 @@ streamlit run src/app_streamlit.py     # single-model demo (needs the trained mo
 
 ---
 
-*Built for DATS 6312 (NLP). Figures and results are reproduced from the project report in `docs/`.*
