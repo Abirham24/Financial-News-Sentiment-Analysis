@@ -5,7 +5,7 @@
 
 Classifying ~**1.8 million** financial news headlines as **negative / neutral / positive**, and comparing classical, recurrent, and transformer-based models for financial sentiment. We use **FinBERT** as an automatic labeling ("teacher") model, validate those labels against the expert-annotated **Financial PhraseBank**, and fine-tune five models — culminating in an interactive Streamlit demo that compares them side-by-side.
 
-Full write-up: [`docs/final-group-project-report.pdf`](docs/final-group-project-report.pdf) · Demo video: [Loom](https://www.loom.com/share/a39dedccda1741e284489ed3ed0f91ba)
+Full write-up: [`docs/Final-NLP-Project-Report.pdf`](docs/Final-NLP-Project-Report.pdf) · Demo video: [Loom](https://www.loom.com/share/a39dedccda1741e284489ed3ed0f91ba)
 
 ---
 
@@ -167,8 +167,8 @@ An interactive **"Financial Sentiment Lab"** app compares **Logistic Regression,
 │   ├── 2_train_models.py
 │   └── app_streamlit.py
 ├── docs/
-│   ├── final-group-project-report.pdf
-│   ├── NLP Project Final Presentation.pptx
+│   ├── Final-NLP-Project-Report.pdf
+│   ├── Final-NLP-Project-Presentation.pptx
 │   └── images/                 # figures used in this README
 └── data/                       # datasets (gitignored — download from Kaggle/Drive)
 ```
