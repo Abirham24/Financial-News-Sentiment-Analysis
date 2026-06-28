@@ -152,7 +152,7 @@ An interactive **"Financial Sentiment Lab"** app compares **Logistic Regression,
 |:--:|:--:|
 | ![Streamlit demo 1](docs/images/streamlit_demo_1.png) | ![Streamlit demo 2](docs/images/streamlit_demo_2.png) |
 
-🎞️ **Walkthrough video:** https://www.loom.com/share/a39dedccda1741e284489ed3ed0f91ba
+**Walkthrough video:** https://www.loom.com/share/a39dedccda1741e284489ed3ed0f91ba
 
 ## Repository Structure
 
