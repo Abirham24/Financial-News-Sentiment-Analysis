@@ -1,0 +1,25 @@
+# ===== Data (regenerable / large) =====
+data/*.csv
+!data/.gitkeep
+
+# ===== Model artifacts & outputs =====
+models/
+outputs/
+*.pt
+*.bin
+*.safetensors
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ===== OS / editor =====
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
