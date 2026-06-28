@@ -1,7 +1,7 @@
 # Sentiment Analysis of Financial News Headlines
 
 > Course project — **DATS 6312 (NLP)**, The George Washington University
-> Authors: **Abirham Getie**, **Julio Montoya**
+> Authors: **Abirham Getie**
 
 Classifying ~**1.8 million** financial news headlines as **negative / neutral / positive**, and comparing classical, recurrent, and transformer-based models for financial sentiment. We use **FinBERT** as an automatic labeling ("teacher") model, validate those labels against the expert-annotated **Financial PhraseBank**, and fine-tune five models — culminating in an interactive Streamlit demo that compares them side-by-side.
 
