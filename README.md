@@ -32,7 +32,7 @@ We initially prototyped on a **10,000-row sample** (PyCharm + Google Cloud), but
 
 ## Dataset
 
-- **Source:** [Massive Stock News Analysis Database for NLP Backtests](https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests) (Kaggle) — `raw_partner_headlines.csv`
+- **Source:** [Massive Stock News Analysis Database for NLP Backtests](https://www.kaggle.com/datasets/miguelaenlle/massive-stock-news-analysis-db-for-nlpbacktests) (Kaggle) - `raw_partner_headlines.csv`
 - **Size:** ~1,845,559 rows × 6 columns
 - **Fields:** `headline`, `url`, `publisher`, `date`, `stock` (ticker)
 - **Benchmark for label validation:** [Financial PhraseBank](https://huggingface.co/datasets/takala/financial_phrasebank) (expert-annotated)
@@ -45,7 +45,7 @@ We initially prototyped on a **10,000-row sample** (PyCharm + Google Cloud), but
 flowchart TD
     A["Raw Dataset<br/>~1.8M headlines (Kaggle)"] --> B["Text Cleaning<br/>lowercase · strip URLs/symbols<br/>spaCy lemmatization · stopwords"]
     B --> C["FinBERT Labeling<br/>negative · neutral · positive<br/>+ softmax confidence"]
-    C -. validate .-> V["Financial PhraseBank<br/>benchmark — 97.2% acc"]
+    C -. validate .-> V["Financial PhraseBank<br/>benchmark - 97.2% acc"]
     C --> D["Cleaned + Labeled Dataset"]
     D --> E["Stratified Split<br/>train · val · test"]
 
@@ -91,7 +91,7 @@ We additionally inspect FinBERT's **confidence distribution** to flag ambiguous 
 |:--:|:--:|
 | ![PhraseBank distribution](docs/images/phrasebank_distribution.png) | ![Dataset distribution](docs/images/dataset_distribution.png) |
 
-**Sentiment by publisher (top 5).** Tone varies sharply by outlet — e.g. *Born2Invest* skews entirely negative, while *Fox Business* and *GuruFocus* are predominantly neutral.
+**Sentiment by publisher (top 5).** Tone varies sharply by outlet - e.g. *Born2Invest* skews entirely negative, while *Fox Business* and *GuruFocus* are predominantly neutral.
 
 ![Sentiment by publisher](docs/images/sentiment_by_publisher.png)
 
