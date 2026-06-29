@@ -85,7 +85,7 @@ We additionally inspect FinBERT's **confidence distribution** to flag ambiguous 
 
 ## Exploratory Data Analysis
 
-**Sentiment distribution — benchmark vs. our dataset.** Both skew heavily *neutral*, reflecting the factual tone of financial reporting.
+**Sentiment distribution - benchmark vs. our dataset.** Both skew heavily *neutral*, reflecting the factual tone of financial reporting.
 
 | Financial PhraseBank | Our 1.8M Dataset |
 |:--:|:--:|
@@ -140,7 +140,7 @@ Negative (0.91) and neutral (0.84) are classified most reliably; **positive (0.7
 
 ## Error & Behavior Analysis
 
-We probed the models on **contradictory / mixed-sentiment** headlines. All three transformers correctly prioritize financially harmful signals (losses, warnings) as negative. The interesting divergence: for *"The merger discussions have been paused indefinitely,"* DistilBERT/BERT predicted **negative**, while **FinBERT predicted neutral with 99.5% confidence** — treating "paused" as uncertainty rather than clear loss. This domain sensitivity helps explain FinBERT's edge.
+We probed the models on **contradictory / mixed-sentiment** headlines. All three transformers correctly prioritize financially harmful signals (losses, warnings) as negative. The interesting divergence: for *"The merger discussions have been paused indefinitely,"* DistilBERT/BERT predicted **negative**, while **FinBERT predicted neutral with 99.5% confidence** - treating "paused" as uncertainty rather than clear loss. This domain sensitivity helps explain FinBERT's edge.
 
 ![Tricky sentences](docs/images/tricky_sentences.png)
 
